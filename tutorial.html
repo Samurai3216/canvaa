@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Canvas HTML5</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contatos.html">Contatos</a>
+            <a href="#informacoes">Informações</a>
+            <a href="tutorial.html">Tutorial de Como Aplicar</a>
+        </nav>
+    </header>
+    <h1>Tutorial de Canvas no HTML5</h1>
+    <p>O elemento <code>&lt;canvas&gt;</code> é usado para desenhar gráficos via JavaScript. Neste tutorial, vamos mostrar como configurar e desenhar no canvas.</p>
+    
+    <h2>Passo 1: Adicionando o elemento Canvas</h2>
+    <p>Primeiro, adicione o elemento <code>&lt;canvas&gt;</code> no seu HTML.</p>
+    <pre><code>&lt;canvas id="meuCanvas" width="500" height="400"&gt;Seu navegador não suporta o elemento canvas.&lt;/canvas&gt;</code></pre>
+    
+    <canvas id="meuCanvas" width="500" height="400">Seu navegador não suporta o elemento canvas.</canvas>
+    
+    <h2>Passo 2: Acessando o contexto do Canvas</h2>
+    <p>Depois de adicionar o canvas, você precisa acessar o contexto de desenho com JavaScript.</p>
+    <pre><code>const canvas = document.getElementById('meuCanvas');
+const contexto = canvas.getContext('2d');</code></pre>
+
+    <h2>Passo 3: Desenhando no Canvas</h2>
+    <p>Agora, você pode usar o contexto para desenhar. Aqui está um exemplo de como desenhar um retângulo e um círculo.</p>
+    <pre><code>// Desenhando um retângulo
+contexto.fillStyle = '#FF0000';
+contexto.fillRect(20, 20, 150, 100);
+
+// Desenhando um círculo
+contexto.beginPath();
+contexto.arc(300, 200, 50, 0, 2 * Math.PI);
+contexto.fillStyle = '#00FF00';
+contexto.fill();</code></pre>
+
+    <script>
+        const canvas = document.getElementById('meuCanvas');
+        const contexto = canvas.getContext('2d');
+
+        // Desenhando um retângulo
+        contexto.fillStyle = '#FF0000';
+        contexto.fillRect(20, 20, 150, 100);
+
+        // Desenhando um círculo
+        contexto.beginPath();
+        contexto.arc(300, 200, 50, 0, 2 * Math.PI);
+        contexto.fillStyle = '#00FF00';
+        contexto.fill();
+    </script>
+    <a href="teste.html">Ir a pagina de exemplos</a>
+
+    <h2>Referências</h2>
+    <p>Para mais informações sobre o elemento canvas, consulte a <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API" target="_blank">documentação do MDN</a>.</p>
+</body>
+</html>
